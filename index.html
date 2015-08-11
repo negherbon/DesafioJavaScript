@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Desafio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/custom-bootstrap.css" rel="stylesheet">
+    <!-- DataTables Style -->
+    <link href="css/datatables.css" rel="stylesheet">
+    <!-- My Customized CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/">Desafio</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Menu -->
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li ng-class="{active: active == '/'}"><a href="#/vehicles">Carros</a></li>
+            <li ng-class="{active: active == '/brands'}"><a href="#/brands">Marcas</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="page-header">{{title}}</h2>
+
+          <!-- Action Buttons -->
+          <div class="ca-action-buttons">
+              <!-- Coloca um WebComponent -->
+              <div class="btn-group">
+                <button id="ca-btn-new" type="button" class="btn btn-primary">Novo</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a id="ca-btn-update" href="">Alterar</a></li>
+                </ul>
+              </div>
+
+              <button id="ca-btn-remove" type="button" class="btn btn-danger" disabled="disabled">Remover</button>
+          </div>
+
+          <div class="table-responsive ca-table-overflow">
+            <!-- Content - SPA -->
+            <div ng-view></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- JavaScript Begin -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/parse-1.5.0.min.js"></script> <!-- Parse Cloud Storage -->
+    <script src="js/main.js"></script>
+    <script src="js/datatables/datatables.js"></script>
+    <script src="js/datatables/plugins/datatables-bootstrap.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/controllers.js"></script>
+    <!-- JavaScript End -->
+  </body>
+</html>

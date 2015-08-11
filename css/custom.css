@@ -1,0 +1,42 @@
+/*
+ * My Customized Configuration CSS
+ */
+
+.ca-action-buttons {
+	height: 35px;
+	width: 100%;
+}
+
+.ca-action-buttons input {
+	height: 35px;
+	width: 180px;
+	float: right;
+}
+
+.ca-form {
+	width: 60%;
+	display: none;
+	margin-top: 20px;
+}
+
+.form-group span {
+	color: #FF0000;
+}
+
+.ca-table-overflow {
+	overflow: hidden;
+}
+
+.ca-table-selected {
+	background: #ccc !important;
+}
+
+#table-vehicles tr.even td,
+#table-vehicles tr.odd td {
+	line-height: 50px;
+}
+
+.ca-table-image {
+	width: 70px;
+	height: 45px;
+}
